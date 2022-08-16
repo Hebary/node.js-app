@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Monitor Gamer Curvo 34'' ",
+    "price": 1700,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_745170-MLA44913793139_022021-W.webp"
+   
+  },
+  {
+    "name": "IPHONE 13",
+    "price": 2500,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_799027-MLA47776845273_102021-V.webp"
+  },
+  {
+    "name": "Noga TYPON KT Gamer",
+    "price": 1300,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_780232-MLA49523781288_032022-V.webp"
+ },
+ {
+  "name":"MotherBoard Asus Tuf gaming",
+  "price":5000,
+  "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_841516-MLA44561689161_012021-W.webp"
+ },
+ {
+  "name":"Apple ipad",
+  "price":1000,
+  "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_994609-MLA47871010530_102021-V.webp"
+ },
+
+ {
+  "name":"Nootebook Asus",
+  "price":800,
+  "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_908593-MLA49420869607_032022-V.webp"
+ },
+ {
+  "name":"Apple MacBook Air",
+  "price":1700,
+  "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_801112-MLA46516512347_062021-V.webp"
+ },
+ {
+  "name":"Monitor Gamer Samsung",
+  "price":4500,
+  "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_973781-MLA48131216539_112021-W.webp"
+ },
+ {
+  "name":"Curved gaming Monitor",
+  "price":5000,
+  "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_961934-MLA49064201706_022022-W.webp"
+ },
+ {
+  "name":"Tablet Lenovo",
+  "price":4000,
+  "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_898122-MLA48244069278_112021-V.webp"
+ }
+]
