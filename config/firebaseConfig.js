@@ -7,7 +7,7 @@ const firebaseConfig = {
     projectId: "nodejs-app-ed569",
     storageBucket: "nodejs-app-ed569.appspot.com",
     messagingSenderId: "480246136314",
-    appId: "process.env.API_ID"
+    appId: process.env.API_ID
   };
   
   // Initialize Firebase
