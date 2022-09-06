@@ -1,5 +1,5 @@
 import { formatDistanceToNow } from 'date-fns';
-import { PRODUCTSfb } from '../DAOs/index.js';
+// import { PRODUCTSfb } from '../DAOs/index.js';
 
 export const postProducts = async (req, res) => {
     const product = req.body;

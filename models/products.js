@@ -31,7 +31,7 @@ const productsSchema = mongoose.Schema({
     },
     timestamps:{
         type: String,
-        default: formatDistanceToNow(new Date(Date.now()) , {addSuffix: true})
+        default: Date.now()
     }
 });
 const Products = mongoose.model("Products", productsSchema);

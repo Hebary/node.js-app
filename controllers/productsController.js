@@ -1,4 +1,4 @@
-import { PRODUCTS, CARTS  } from "../DAOs/index.js"
+// import { PRODUCTS, CARTS  } from "../DAOs/index.js"
 
 
 export const getProducts = async (req,res)=>{

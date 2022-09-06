@@ -19,6 +19,10 @@ export class Mongo{
         return await this.DAO.findById(id)
     }
 
+    async findOne(email){
+        return await this.DAO.findOne({email})
+    }
+
     async save(item){
         const newItem = new this.DAO(item);
         return await newItem.save();

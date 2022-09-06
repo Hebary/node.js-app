@@ -2,13 +2,13 @@ import express, { Router } from 'express';
 import dotenv from 'dotenv';
 
 // import { postProducts, getProducts, updateProducts, deleteProducts } from "../controllers/productsController.js";
-// import { postProducts, getProducts, updateProducts, deleteProducts } from "../controllers/productsMongoController.js";
-import {
-    postProducts,
-    getProducts,
-    updateProducts,
-    deleteProducts
-} from '../controllers/productsFbaseController.js';
+import { postProducts, getProducts, updateProducts, deleteProducts } from "../controllers/productsMongoController.js";
+// import {
+//     postProducts,
+//     getProducts,
+//     updateProducts,
+//     deleteProducts
+// } from '../controllers/productsFbaseController.js';
 
 import admin from "../middleware/admin.js";
 

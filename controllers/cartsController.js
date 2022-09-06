@@ -1,4 +1,4 @@
-import { PRODUCTS, CARTS } from "../DAOs/index.js"
+// import { PRODUCTS, CARTS } from "../DAOs/index.js"
 
 export const newCart = async (req, res) => {
     const cart = {products:[]}
