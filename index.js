@@ -20,8 +20,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-
 app.use('/api/products', routerProducts)
 app.use('/api/cart', routerCart)
 app.use('/api/users', router)
-
+app.use('/api/info', (req, res) => {
+    res.send({
+        nodeVer:process.version,
+        idDelProceso: process.pid,
+        plataforma: process.platform,
+        folder: process.cwd(),
+        memoria: process.memoryUsage(), 
+    })
+});

@@ -3,10 +3,10 @@ dotenv.config();
 
 const firebaseConfig = {
     apiKey: process.env.API_KEY,
-    authDomain: "nodejs-app-ed569.firebaseapp.com",
-    projectId: "nodejs-app-ed569",
-    storageBucket: "nodejs-app-ed569.appspot.com",
-    messagingSenderId: "480246136314",
+    authDomain: process.env.AUTH_DOMAIN,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId:process.env.MESSAGING_SENDER_ID,
     appId: process.env.API_ID
   };
   
