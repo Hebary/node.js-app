@@ -13,8 +13,12 @@ const logger = require('./config/logger');
 dotenv.config();
 
 const app = express();
-    //CLUSTER (!Master)
-    if(!cluster.isMaster) {
+
+//CLUSTER
+
+const clusterMode = process.argv[3] === "CLUSTER";
+
+    if(clusterMode && cluster.isMaster) {
         console.log(`Master ${process.pid} is running`);
         console.log(`there's ${ numCPUs } CPU's `);
 
