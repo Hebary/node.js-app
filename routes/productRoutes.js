@@ -1,25 +1,20 @@
-import express, { Router } from 'express';
-import dotenv from 'dotenv';
+const express = require('express');
+const { Router } = require('express');
+const compression  = require('compression');
 
-// import { postProducts, getProducts, updateProducts, deleteProducts } from "../controllers/productsController.js";
-import { postProducts, getProducts, updateProducts, deleteProducts } from "../controllers/productsMongoController.js";
-// import {
-//     postProducts,
-//     getProducts,
-//     updateProducts,
-//     deleteProducts
-// } from '../controllers/productsFbaseController.js';
+const  dotenv = require('dotenv');
 
-import admin from "../middleware/admin.js";
+const { postProducts, getProducts, updateProducts, deleteProducts } = require('../controllers/productsController');
+
+const admin = require ("../middleware/admin");
 
 dotenv.config();
 
 const routerProducts = Router();
 
-routerProducts.get('/:id?', getProducts);
+routerProducts.get('/:id?', compression(), getProducts);
 routerProducts.post('/', admin, postProducts);
 routerProducts.put('/:id', admin, updateProducts)
 routerProducts.delete('/:id', admin, deleteProducts)
 
-
-export default routerProducts;
+module.exports = routerProducts;

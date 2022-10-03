@@ -1,16 +1,8 @@
-import express, { Router } from 'express';
+const express = require('express');
+const { Router } = require('express');
 
 
-// import { getAllCartProducts, newCart, deleteCart, addProduct, deleteProduct } from "../controllers/cartsController.js";
-// import { getAllCartProducts, newCart, deleteCart, addProduct, deleteProduct } from "../controllers/cartsMongoController.js";
-import {
-    getAllCartProducts,
-    newCart,
-    deleteCart,
-    addProduct,
-    deleteProduct
-} from '../controllers/cartsFbaseController.js';
-
+const { getAllCartProducts, newCart, deleteCart, addProduct, deleteProduct } = require('../controllers/cartsController');
 const routerCart = Router();
 
 
@@ -21,4 +13,4 @@ routerCart.delete('/:id', deleteCart)
 routerCart.delete('/:id/products/:idprod', deleteProduct)
 
 
-export default routerCart
+module.exports = routerCart;

@@ -1,6 +1,6 @@
 //on this middleware : precheck user before request profile funct on userRoutes
-import jwt from "jsonwebtoken";
-import User from "../models/users.js";
+const jwt = require("jsonwebtoken"); 
+const User = require ("../models/users");
 
 const checkAuth = async ( req, res, next ) =>{
     if(
@@ -25,4 +25,4 @@ const checkAuth = async ( req, res, next ) =>{
     next();
 }
 
-export default checkAuth;
+module.exports = checkAuth;

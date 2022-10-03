@@ -1,4 +1,4 @@
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 dotenv.config();
 
 const firebaseConfig = {
@@ -12,4 +12,4 @@ const firebaseConfig = {
   
   // Initialize Firebase
   // const app = initializeApp(firebaseConfig);
-  export default firebaseConfig;
+  module.exports =  firebaseConfig;

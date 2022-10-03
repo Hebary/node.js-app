@@ -1,17 +1,16 @@
-import { Container } from './container.js';
-import { Firebase } from './firebase.js';
-import { Mongo } from './mongo.js';
+const Mongo = require('./mongo');
 
-import Products from '../models/products.js'
-import Carts from '../models/carts.js'
-import User from '../models/users.js'
+const Products =require( '../models/products');
+const Carts = require( '../models/carts')
+const Users = require( '../models/users')
 
 
-// export const PRODUCTS = new Container('dbProducts.json');
-// export const CARTS = new Container('dbCarts.json');
-// export const PRODUCTSfb = new Firebase('products');
-// export const CARTSfb = new Firebase('carts');
-export const Product = new Mongo(Products);
-// export const CARTSmongo = new Mongo(Carts);
+const Product = new Mongo(Products);
+const Cart = new Mongo(Carts);
+const User = new Mongo(Users);
 
-export const Users = new Mongo(User);
+module.exports = {
+    Product,
+    User,
+    Cart
+}

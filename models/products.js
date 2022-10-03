@@ -1,5 +1,4 @@
-import mongoose from "mongoose";
-import { formatDistanceToNow } from "date-fns";
+const mongoose = require('mongoose');
 
 
 
@@ -40,4 +39,5 @@ function codeGenerator(){
     return Math.random().toString(32).substring(2);
 }
 
-export default Products;
+
+module.exports =  Products;

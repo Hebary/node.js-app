@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
-const cartsSchema = await mongoose.Schema({
+const cartsSchema = mongoose.Schema({
     products:[],
     timestamps:{
         type: String,
@@ -9,4 +9,4 @@ const cartsSchema = await mongoose.Schema({
 });
 const Carts = mongoose.model("Carts", cartsSchema);
 
-export default Carts;
+module.exports = Carts;

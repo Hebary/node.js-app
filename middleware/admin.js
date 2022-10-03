@@ -1,4 +1,4 @@
-export default function admin(req, res, next) {
+function admin(req, res, next) {
     let admin = true;
     if(!admin){
         res.json(createError());
@@ -16,3 +16,5 @@ const createError=(route, method) => {
     }
     return error
 }  
+
+module.exports = admin;

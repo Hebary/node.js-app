@@ -1,6 +1,6 @@
-import dbConnection from "../config/mongoConfig.js";
+const dbConnection = require ("../config/mongoConfig.js");
 
-export class Mongo{
+class Mongo{
 
     constructor(model){
         this.db = dbConnection();
@@ -38,3 +38,4 @@ export class Mongo{
     
 }
 
+module.exports = Mongo;
