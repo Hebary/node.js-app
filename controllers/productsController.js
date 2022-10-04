@@ -21,18 +21,17 @@ const updateProducts = async (req, res) => {
         const product = req.body;
         
         if(! await Product.getById(id)){
-            const error = new Error('Product not found')
+            const error = new Error('Product not found');
             logger.error(error.message)
-            return res.json({ msg: error.message })
+            return res.json({ msg: error.message });
         }
         if(!product){
-            const error = new Error('Product not provided')
+            const error = new Error('Product not provided');
             logger.error(error.message)
-            return res.status(404).json({ msg: error.message })
+            return res.status(404).json({ msg: error.message });
         }
-        await Product.updateOne(id, product)
-        res.json({msg: 'product updated successfully'})
-        
+        await Product.updateOne(id, product);
+        res.json({msg: 'product updated successfully'});
     }
 
 const deleteProducts = async (req, res)=>{
@@ -40,10 +39,10 @@ const deleteProducts = async (req, res)=>{
         if(! await Product.getById(id)){
             const error = new Error('Product not found');
             logger.error(error.message);
-            return res.json({ msg: error.message })
+            return res.json({ msg: error.message });
         }
         await Product.deleteOne(id);
-        res.json({ msg: 'Product deleted succesfully' })
+        res.json({ msg: 'Product deleted succesfully' });
     }
 
 module.exports = {

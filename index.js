@@ -38,7 +38,7 @@ const clusterMode = process.argv[3] === "CLUSTER";
 
         app.listen(PORT, err => {
             if (!err) {
-                console.log(`Server corriendo en el puerto ${PORT} - PID WORKER ${process.pid}`);
+                console.log(`Server express (fork) port ${PORT} - PID WORKER ${process.pid}`);
             }
         });
     }
@@ -67,10 +67,10 @@ app.use('/api/info', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    const{ url, method } = req;
+    const { url, method } = req;
     logger.warn(`Ruta no implementada: ${url} - ${method}`);
     res.status(404).send({error: 'Ruta '+url+' no implementada'});
-})
+});
 
 // pm2 start index.js --name="server-fork" --watch -- 8081
 // pm2 start index.js --name="server-cluster" --watch i- max -- 8082
