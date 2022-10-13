@@ -1,9 +1,10 @@
 const { Cart, Product } = require('../DAOs/index.js');
-
+const { cartRegistry } = require('../helpers/sendEmail.js');
 const newCart = async (req, res) => {
     const newCart = req.body;
     await Cart.save(newCart);
-    res.json({ msg: 'order created successfully' });
+    cartRegistry(req.body);
+    res.json({ msg: 'order created successfully, check your email' });
 }
 
 const getAllCartProducts = async (req, res) => {
