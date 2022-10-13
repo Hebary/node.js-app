@@ -14,7 +14,7 @@ const routerProducts = Router();
 
 routerProducts.get('/:id?', compression(), getProducts);
 routerProducts.post('/', admin, postProducts);
-routerProducts.put('/:id', admin, updateProducts)
+routerProducts.put('/:id', updateProducts)
 routerProducts.delete('/:id', admin, deleteProducts)
 
 module.exports = routerProducts;

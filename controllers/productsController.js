@@ -30,7 +30,7 @@ const updateProducts = async (req, res) => {
             logger.error(error.message)
             return res.status(404).json({ msg: error.message })
         }
-        await Product.updateOne(id, product)
+        await Product.updateOne(id, product);
         res.json({msg: 'product updated successfully'})
         
     }
