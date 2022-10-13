@@ -7,10 +7,10 @@ const routerCart = Router();
 
 
 routerCart.post('/', newCart)
-routerCart.post('/:id/products', addProduct)
-routerCart.get('/:id/products', getAllCartProducts)
-routerCart.delete('/:id', deleteCart)
-routerCart.delete('/:id/products/:idprod', deleteProduct)
+// routerCart.post('/:id/products', addProduct)
+// routerCart.get('/:id/products', getAllCartProducts)
+// routerCart.delete('/:id', deleteCart)
+// routerCart.delete('/:id/products/:idprod', deleteProduct)
 
 
 module.exports = routerCart;

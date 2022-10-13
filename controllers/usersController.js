@@ -1,6 +1,7 @@
 const Users = require('../models/users');
 const createJWT =require ("../helpers/createJWT");
 const logger = require('../config/logger');
+const { emailRegistry } = require('../helpers/sendEmail');
 
 
 
@@ -16,7 +17,16 @@ const logger = require('../config/logger');
     //create new user and give it an ID
         const user = new Users(req.body);
         await user.save();
-        return res.status(200).json({msg:"User created successfully"});
+                //send email with token
+                emailRegistry({
+                    email:user.email,
+                    name:user.name,
+                    token:user.token,
+                    address:user.address,
+                    phone:user.phone,
+                    file:user.file
+                });
+                return  res.status(200).json({msg:"User created successfully, check your email to confirm your account"});
     } catch (err) {
         console.log(err);
         logger.error("Error creating user: " + err);

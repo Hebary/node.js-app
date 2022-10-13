@@ -1,12 +1,9 @@
 const { Cart, Product } = require('../DAOs/index.js');
 
 const newCart = async (req, res) => {
-    const newCart = await Cart.create({
-        products:[], 
-        timestamps: Date.now()
-    });
-    await Cart.save(newCart)
-    res.json({id:newCart._id});
+    const newCart = req.body;
+    await Cart.save(newCart);
+    res.json({ msg: 'order created successfully' });
 }
 
 const getAllCartProducts = async (req, res) => {
@@ -83,8 +80,4 @@ const deleteProduct = async (req, res)=>{
 
 module.exports ={
     newCart,
-    getAllCartProducts,
-    addProduct,
-    deleteCart,
-    deleteProduct
 }

@@ -19,6 +19,20 @@ const userSchema = mongoose.Schema(
             required:true,
             trim:true,
         },
+        address:{
+            type:String,
+            required:true,
+            trim:true,
+        },
+        phone:{
+            type:String,
+            required:true,
+            trim:true,
+        },
+        file:{
+            type:String,
+            trim:true,
+        },
         token:{
             type: String
         }

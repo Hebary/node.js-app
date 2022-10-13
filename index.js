@@ -7,6 +7,7 @@ const numCPUs = require('os').cpus().length
 const routerCart = require( './routes/cartRoutes');
 const routerProducts = require( './routes/productRoutes');
 const router = require( './routes/userRoutes');
+const routerAvatar = require( './routes/avatarRoutes');
 //logger
 const logger = require('./config/logger');
 
@@ -34,7 +35,7 @@ const clusterMode = process.argv[3] === "CLUSTER";
 
     } else {
         //FORK
-        const PORT  = process.env.PORT || parseInt(process.argv[2]) || 8080;
+        const PORT  = process.env.PORT || parseInt(process.argv[2]) || 3000;
 
         app.listen(PORT, err => {
             if (!err) {
@@ -49,11 +50,13 @@ app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('avatar'));
 
 
 app.use('/api/products', routerProducts);
 app.use('/api/cart', routerCart);
 app.use('/api/users', router);
+app.use('/api/avatar', routerAvatar);
 
 app.use('/api/info', (req, res) => {
     res.send({
